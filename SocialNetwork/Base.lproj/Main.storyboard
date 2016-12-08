@@ -59,6 +59,9 @@
                                 <state key="normal" image="f">
                                     <color key="titleColor" red="0.99160894300000002" green="1" blue="0.99919409029999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xaI-Qk-E65"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-mh-jNx">
                                 <subviews>
