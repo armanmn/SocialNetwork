@@ -73,7 +73,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3f4-81-Hta" customClass="FancyField" customModule="SocialNetwork" customModuleProvider="target">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BN-Kwp" customClass="FancyBtn" customModule="SocialNetwork" customModuleProvider="target">
                                         <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,6 +81,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" red="0.99160894300000002" green="1" blue="0.99919409029999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzA-B8-1SP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,6 +106,10 @@
                             <constraint firstItem="a7c-8j-oJp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yci-sl-vlR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailFiled" destination="cmI-wi-uDw" id="fLw-99-jCu"/>
+                        <outlet property="passwdField" destination="3f4-81-Hta" id="WyG-Eo-ETk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

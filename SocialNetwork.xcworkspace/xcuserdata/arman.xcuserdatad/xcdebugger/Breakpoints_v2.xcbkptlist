@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/SignInVC.swift"
-            timestampString = "502878645.653938"
+            timestampString = "502886837.390226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "facebookBtnTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -12,6 +12,10 @@ import FBSDKLoginKit
 import  Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailFiled: FancyField!
+    @IBOutlet weak var passwdField: FancyField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,5 +53,22 @@ class SignInVC: UIViewController {
         })
     }
     
+    @IBAction func signInTapped(_ sender: AnyObject) {
+        if let email = emailFiled.text, let pass = passwdField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
+                if error == nil {
+                    print("Arman: Email user authenticated with Firebase")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
+                        if error != nil {
+                            print("Arman: Unable to authenticate with Firebase with email")
+                        } else {
+                            print("Arman: Success authenticate with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+    }
     
 }
